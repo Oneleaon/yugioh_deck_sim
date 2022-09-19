@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
 
 import 'pages/home.dart';
-import 'pages/decks.dart';
+import 'pages/cards.dart';
+import 'pages/settings.dart';
 
 void main() {
   runApp(
     MaterialApp(
-      title: 'Named Routes Demo',
+      title: 'Yu-Gi-Oh Deck Builder',
       theme: ThemeData(primarySwatch: Colors.orange),
       initialRoute: '/',
       routes: {
         '/': (context) => const Home(),
-        '/decks': (context) => const Decks(),
+        '/cards': (context) => const Cards(),
+        '/settings': (context) => const Settings(),
       },
     ),
   );
