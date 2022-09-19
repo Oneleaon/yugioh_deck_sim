@@ -25,6 +25,9 @@ class Home extends StatelessWidget {
           child: Text('Menu'),
         ),
         ListTile(
+          leading: const Icon(
+            Icons.book,
+          ),
           title: const Text('Deck Library'),
           onTap: () {
             // Current
@@ -33,6 +36,9 @@ class Home extends StatelessWidget {
           },
         ),
         ListTile(
+            leading: const Icon(
+              Icons.search,
+            ),
             title: const Text("Card Search"),
             onTap: () {
               // Close Drawer
@@ -41,6 +47,9 @@ class Home extends StatelessWidget {
               Navigator.pushNamed(context, '/cards');
             }),
         ListTile(
+            leading: const Icon(
+              Icons.settings,
+            ),
             title: const Text("Settings"),
             onTap: () {
               // Close Drawer
