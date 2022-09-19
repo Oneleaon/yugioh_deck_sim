@@ -35,16 +35,18 @@ class Home extends StatelessWidget {
         ListTile(
             title: const Text("Card Search"),
             onTap: () {
-              // Go to page
               // Close Drawer
               Navigator.pop(context);
+              // Go to page
+              Navigator.pushNamed(context, '/cards');
             }),
         ListTile(
             title: const Text("Settings"),
             onTap: () {
-              // Go to page
               // Close Drawer
               Navigator.pop(context);
+              // Go to page
+              Navigator.pushNamed(context, '/settings');
             })
       ])),
     );
