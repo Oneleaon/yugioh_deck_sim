@@ -7,13 +7,17 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Deck Library')),
-      body: Center(
-          child: ElevatedButton(
-              onPressed: () {
-                //Nav to second screen
-                Navigator.pushNamed(context, '/cards');
-              },
-              child: const Text('Launch Screen'))),
+      body: GridView.count(
+        crossAxisCount: 2,
+        children: List.generate(100, (index) {
+          return Center(
+            child: Text(
+              'Item $index',
+              style: Theme.of(context).textTheme.headline5,
+            ),
+          );
+        }),
+      ),
       drawer: Drawer(
           child: ListView(padding: EdgeInsets.zero, children: [
         const DrawerHeader(
